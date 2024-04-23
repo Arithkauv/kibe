@@ -229,12 +229,12 @@ fun initExtras() {
         }
     }
     FluidStorage.combinedItemApiProvider(WOODEN_BUCKET).register {
-        EmptyItemFluidStorage(it, WATER_WOODEN_BUCKET, Fluids.WATER, FluidConstants.BUCKET)
+        EmptyItemFluidStorage(it, WOODEN_WATER_BUCKET, Fluids.WATER, FluidConstants.BUCKET)
     }
     FluidStorage.GENERAL_COMBINED_PROVIDER.register { context ->
         (context.itemVariant.item as? WoodenBucket)?.let { bucketItem ->
             val bucketFluid = Fluids.WATER
-            if (bucketItem == WATER_WOODEN_BUCKET) {
+            if (bucketItem == WOODEN_WATER_BUCKET) {
                 return@register FullItemFluidStorage(context, WOODEN_BUCKET, FluidVariant.of(bucketFluid), FluidConstants.BUCKET)
             }
         }
