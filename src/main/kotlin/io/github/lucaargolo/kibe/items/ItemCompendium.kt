@@ -176,7 +176,7 @@ val TORCH_SLING = register(Identifier(MOD_ID, "torch_sling"),  TorchSling(Settin
 val ESCAPE_ROPE = register(Identifier(MOD_ID, "escape_rope"),  EscapeRope(Settings().maxCount(1).rarity(Rarity.UNCOMMON)))
 
 val WOODEN_BUCKET = register(Identifier(MOD_ID, "wooden_bucket"), WoodenBucket.Empty(Settings().maxCount(16)))
-val WATER_WOODEN_BUCKET = register(Identifier(MOD_ID, "water_wooden_bucket"), WoodenBucket.Water(Settings().maxCount(1)))
+val WOODEN_WATER_BUCKET = register(Identifier(MOD_ID, "wooden_water_bucket"), WoodenBucket.Water(Settings().maxCount(1)))
 
 val GLIDER_LEFT_WING = register(Identifier(MOD_ID, "glider_left_wing"), Item(Settings()))
 val GLIDER_RIGHT_WING = register(Identifier(MOD_ID, "glider_right_wing"), Item(Settings()))
