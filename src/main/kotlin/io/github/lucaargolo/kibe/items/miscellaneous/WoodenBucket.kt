@@ -1,6 +1,6 @@
 package io.github.lucaargolo.kibe.items.miscellaneous
 
-import io.github.lucaargolo.kibe.items.WATER_WOODEN_BUCKET
+import io.github.lucaargolo.kibe.items.WOODEN_WATER_BUCKET
 import io.github.lucaargolo.kibe.items.WOODEN_BUCKET
 import net.minecraft.advancement.criterion.Criteria
 import net.minecraft.block.FluidDrainable
@@ -47,9 +47,9 @@ open class WoodenBucket(val fluid: Fluid, settings: Settings): Item(settings) {
                         if (fluid.item == Fluids.WATER.bucketItem) {
                             user.incrementStat(Stats.USED.getOrCreateStat(this))
                             user.playSound(SoundEvents.ITEM_BUCKET_FILL, 1.0f, 1.0f)
-                            val itemStack2 = ItemUsage.exchangeStack(itemStack, user, ItemStack(WATER_WOODEN_BUCKET))
+                            val itemStack2 = ItemUsage.exchangeStack(itemStack, user, ItemStack(WOODEN_WATER_BUCKET))
                             if (!world.isClient) {
-                                Criteria.FILLED_BUCKET.trigger(user as ServerPlayerEntity, ItemStack(WATER_WOODEN_BUCKET))
+                                Criteria.FILLED_BUCKET.trigger(user as ServerPlayerEntity, ItemStack(WOODEN_WATER_BUCKET))
                             }
                             return TypedActionResult.success(itemStack2, world.isClient())
                         }else{
